@@ -199,7 +199,7 @@ function startGame(cfg) {
 
     if (arraysEqual(ans, lvl[CORRECT])) {
       answerEl.classList.add("correct", "celebrate");
-      feedbackEl.textContent = "🎉 Правильно, бабусю!";
+      feedbackEl.textContent = "🎉 Правильно, бабусю 🐇 !";
       feedbackEl.className = "feedback good";
       nextBtn.disabled = false;
       setTimeout(() => answerEl.classList.remove("celebrate"), 450);
