@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Збери речення англійською 🧩</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>🧩 Збери речення</h1>
+      <nav class="lang-switch">
+        <span class="lang-current">🇺🇦 → 🇬🇧</span>
+        <a href="index-ua.html" class="lang-link">🇬🇧 → 🇺🇦</a>
+      </nav>
+      <!-- порядок кнопок однаковий на обох сторінках -->
+      <div class="progress">
+        <span id="counter">1 / 18</span>
+        <div class="progress-bar"><div id="progressFill"></div></div>
+      </div>
+    </header>
+
+    <main class="card">
+      <p class="hint-label">Переклади англійською 👇</p>
+      <p class="ua" id="promptSentence">…</p>
+
+      <section class="zone-wrap">
+        <p class="zone-title">✅ Твоє речення:</p>
+        <div id="answer" class="zone answer"></div>
+      </section>
+
+      <section class="zone-wrap">
+        <p class="zone-title">🔤 Слова (не всі підходять!):</p>
+        <div id="pool" class="zone pool"></div>
+      </section>
+
+      <div class="feedback" id="feedback"></div>
+    </main>
+
+    <footer class="controls">
+      <button id="hintBtn" class="btn ghost">💡 Підказка</button>
+      <button id="resetBtn" class="btn ghost">🔄 Спочатку</button>
+      <button id="nextBtn" class="btn primary" disabled>Далі ➡️</button>
+    </footer>
+  </div>
+
+  <div id="winScreen" class="win-screen hidden">
+    <div class="win-box">
+      <div class="win-emoji">🏆🎉</div>
+      <h2>Ти переміг!</h2>
+      <p>Ти зібрав усі речення правильно. Молодець!</p>
+      <button id="restartAllBtn" class="btn primary">Грати знову 🔁</button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="engine.js"></script>
+  <script>
+    startGame({ prompt: "ua", correct: "enCorrect", distract: "enDistract" });
+  </script>
+</body>
+</html>
