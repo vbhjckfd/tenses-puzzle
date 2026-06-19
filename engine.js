@@ -71,7 +71,7 @@ function startGame(cfg) {
     const t = document.createElement("button");
     t.className = "tile";
     t.type = "button";
-    t.innerHTML = ingMarkup(text);
+    t.textContent = text;
     t.dataset.word = text;
     t.addEventListener("pointerdown", onPointerDown);
     return t;
